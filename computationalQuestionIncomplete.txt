@@ -1,0 +1,31 @@
+
+var alphNormal=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var alphKey1=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var alphKey2=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+///
+var key21="shopifycmer";
+
+var key1="tobiluke";
+
+var secret="VIAGUIGTLBILOCSDQN";
+
+for (let i = 0; i < key1.length; i++) {
+ //console.log(key1.at(i));
+ var x=key1.charAt(i)
+  alphKey1.splice(alphKey1.indexOf(x), 1);
+   
+}
+key1=[...key1]
+ alphKey1=key1.concat(alphKey1);
+
+for (let i = 0; i < secret.length; i++) {
+ //console.log(key1.at(i));
+  //alphKey1.indexOf(secret.charAt(i))
+  //alphKey1[];
+  var x= secret.toLowerCase().charAt(i); //The letter to decode
+  var y= alphNormal.indexOf(x); //Letter's normal position
+  var z= alphKey1[y]; //Letter's current position
+  console.log(x +" | "+y+" | "+z);
+  secret=secret.replace(secret.charAt(i), z);
+}
+console.log(secret);
