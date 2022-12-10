@@ -8,31 +8,31 @@
 
     <h3>Today is a beautiful day!!</h3>
     <canvas></canvas>
-    <a class="ele">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="174"
-            viewbox="0 0 200 173.20508075688772">
-            <path 
-                d="M0 86.60254037844386L50 0L150 0L200 86.60254037844386L150 173.20508075688772L50 173.20508075688772Z">
-            </path>
-        </svg>
-    </a>
-    <script src='https://d3js.org/d3.v4.min.js'></script>
 
-    <script>
-        d3.select('h3').style('color', 'darkblue');
-        d3.select('h3').style('font-size', '24px');
-
-        //Select SVG element
-
-    </script>
 
 </body>
 
 </html>
+
+<script>
+    canvas.append(
+    <a class="ele">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="174"
+            viewbox="0 0 200 173.20508075688772">
+            <path
+                d="M0 86.60254037844386L50 0L150 0L200 86.60254037844386L150 173.20508075688772L50 173.20508075688772Z">
+            </path>
+        </svg>
+    </a>);
+</script>
 <style>
+    canvas{
+        background-color: lightgray;
+    }
     path {
         fill: aqua;
     }
+
     path:hover {
         fill: orange;
     }
