@@ -1,0 +1,32 @@
+/* answers are
+weloveourmerchants
+welovecodingitsfun
+weloveourcandidate
+weloveourflapjacks
+*/
+var alphNormal=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+var alphKey1=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+//var alphKey2=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+var key1="shopifycmer";
+var key2="tobilutke";
+
+var secret="viaguigtlbilocsdqn";
+///
+for (let i = 0; i <= key1.length; i++) {
+ //console.log(key1.at(i));
+ var x=key1.charAt(i);
+ var y=alphKey1.indexOf(x);
+ alphKey1.splice(y, 1);
+}
+key1=[...key1];
+ alphKey1=key1.concat(alphKey1,"z");
+console.log(alphKey1);
+/////////////////////////////
+var decoded="";
+for (let i = 0; i < secret.length; i++) {
+ var g=alphKey1.indexOf(secret.charAt(i));
+   decoded=decoded+alphNormal[g];
+  //decoded=decoded+secret.charAt(i);
+}
+console.log(decoded);
