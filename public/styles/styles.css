@@ -1,0 +1,12 @@
+body{
+    background: rgb(6,241,108);
+background: -moz-linear-gradient(180deg, rgba(6,241,108,1) 0%, rgba(1,25,9,1) 80%);
+background: -webkit-linear-gradient(180deg, rgba(6,241,108,1) 0%, rgba(1,25,9,1) 80%);
+background: linear-gradient(180deg, rgba(6,241,108,1) 0%, rgba(1,25,9,1) 80%);
+height: 1000px;
+padding: 1rem;
+}
+#log{
+    background-color: beige;
+    min-height: 3rem;
+}

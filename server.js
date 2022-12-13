@@ -2,8 +2,10 @@
 
 const express = require('express');
 const app = express();
+var path = require('path');
 const port = 3000;
-app.use(express.static('public'));
+app.use('/public', express.static('public'));
+app.set('view engine', 'ejs')
 
 
 /*const jsdom = require("jsdom");
@@ -11,7 +13,7 @@ const { JSDOM } = jsdom;
 const { window } = new JSDOM(`...`);
 */
 app.get('/', (req, res) => {
-  res.send('index.html');
+  res.render('index.ejs');
 })
 
 app.listen(port, () => {
