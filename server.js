@@ -5,7 +5,7 @@ const app = express();
 const mysql= require('mysql');
 var path = require('path');
 const port = 3000;
-
+/*
 var connection = mysql.createConnection({
   host: '',
   user:'',
@@ -25,6 +25,7 @@ connection.connect(function(err) {
   });
 
 connection.end();
+*/
 app.get('/', (req, res) => {
   res.render('index.ejs');
 })
