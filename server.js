@@ -5,6 +5,9 @@ const app = express();
 const mysql= require('mysql');
 var path = require('path');
 const port = 3000;
+
+app.use('/public', express.static('public'));
+app.set('view engine', 'ejs')
 /*
 var connection = mysql.createConnection({
   host: '',
@@ -12,8 +15,7 @@ var connection = mysql.createConnection({
   password:'',
   database:''
   });
-app.use('/public', express.static('public'));
-app.set('view engine', 'ejs')
+
 
 connection.connect(function(err) {
     if (err) {
