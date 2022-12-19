@@ -5,15 +5,13 @@ const app = express();
 const mysql= require('mysql');
 var path = require('path');
 const port = 3000;
-/*
-var connection = mysql.createConnection({
-  host: '',
-  user:'',
-  password:'',
-  database:''
-  });
 app.use('/public', express.static('public'));
 app.set('view engine', 'ejs')
+
+var connection = mysql.createConnection({
+  //fill in info
+  });
+
 
 connection.connect(function(err) {
     if (err) {
@@ -25,7 +23,7 @@ connection.connect(function(err) {
   });
 
 connection.end();
-*/
+
 app.get('/', (req, res) => {
   res.render('index.ejs');
 })
