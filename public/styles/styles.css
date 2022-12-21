@@ -10,3 +10,10 @@ padding: 1rem;
     background-color: beige;
     min-height: 3rem;
 }
+.tile{
+    padding: 5px;
+    background-color: aquamarine;
+}
+.tile:hover{
+    background-color: orange;
+}

@@ -1,7 +1,21 @@
 <%- include('pages/partials/header'); -%>
 
     <body>
-        <div id="log"></div>
+        <div id="log">
+
+        </div>
+        <div>
+            <% for(var i=0; i<links.length;i++){ %>
+                <p>
+                <% for(var k=0; k<links[i].length;k++){ %>
+            <a class="tile"><%=links[i][k] %></a>
+            <% } %>
+        </p>
+            <% } %>
+        </div>
+
+
+         <!-- SVG hexagons
         <svg viewBox="-10 -86 920 1125">
             <g id="col1">
                 <polygon width="10" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black" stroke-width="3"
@@ -23,6 +37,7 @@
                     points="350.0,259.8 400.0,346.4 500.0,346.4 550.0,259.8 500.0,173.2 400.0,173.2" />
             </g>
         </svg>
+    -->
     </body>
 
     <!-- Set two databases; one for Pantheon and one for Eidos-->

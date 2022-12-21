@@ -6,8 +6,14 @@ const mysql= require('mysql');
 var path = require('path');
 const port = 3000;
 
+var links = [
+    ['tomato','celery','salad','carrot'],
+    ['blueberry','apple','pear','bannana'],
+    ['ham','bacon','turkey','pork']
+];
+
 app.use('/public', express.static('public'));
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 /*
 var connection = mysql.createConnection({
   host: '',
@@ -29,8 +35,8 @@ connection.connect(function(err) {
 connection.end();
 */
 app.get('/', (req, res) => {
-  res.render('index.ejs');
-})
+  res.render('index.ejs',{links:links});
+});
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
